@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.emaillistchecker/email-verification",
+  "title": "Emaillistchecker.io Email Verification",
+  "description": "Verify emails (valid/invalid/risky/unknown): MX, SMTP, catch-all, disposable. Free agent key.",
+  "version": "1.0.0",
+  "websiteUrl": "https://platform.emaillistchecker.io/agent-gateway",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://platform.emaillistchecker.io/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer <api_key>. Get a free key (25 verifications/day) with the get_api_key tool or POST https://platform.emaillistchecker.io/agent-gateway/register",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
